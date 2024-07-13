@@ -1,0 +1,13 @@
+{
+  "_checkout": null,
+  "_output_dir": "/Users/weberd/smarthub",
+  "_repo_dir": "/Users/weberd/Downloads/cookiecutter-homeassistant-custom-component-main",
+  "_template": "/Users/weberd/Downloads/cookiecutter-homeassistant-custom-component-main",
+  "class_name_prefix": "Smarthub",
+  "domain_name": "smarthub",
+  "friendly_name": "Smarthub Co-op",
+  "github_user": "rotinom",
+  "project_name": "smarthub",
+  "test_suite": "yes",
+  "version": "0.0.0"
+}

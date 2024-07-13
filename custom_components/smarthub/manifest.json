@@ -1,0 +1,10 @@
+{
+  "domain": "smarthub",
+  "name": "Smarthub Co-op",
+  "documentation": "https://github.com/rotinom/smarthub",
+  "issue_tracker": "https://github.com/rotinom/smarthub/issues",
+  "dependencies": [],
+  "config_flow": true,
+  "codeowners": ["@rotinom"],
+  "requirements": []
+}

@@ -1,0 +1,10 @@
+{
+  "domain": "smarthub",
+  "name": "Smarthub Co-op",
+  "codeowners": ["@rotinom"],
+  "dependencies": [],
+  "documentation": "https://github.com/rotinom/smarthub/tree/main",
+  "integration_type": "hub",
+  "iot_class": "cloud_polling",
+  "requirements": ["requests==2.32.3", "pydantic==1.10.17"]
+}
