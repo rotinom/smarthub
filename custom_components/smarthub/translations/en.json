@@ -7,8 +7,9 @@
         "data": {
           "username": "Username",
           "password": "Password",
+          "url": "Your co-op url",
           "service_location_number": "Service Location Number",
-          "account_number": "AccountNumber"
+          "account_number": "Account Number"
         }
       }
     },

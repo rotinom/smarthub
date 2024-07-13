@@ -4,6 +4,7 @@ Custom integration to integrate Smarthub Co-op with Home Assistant.
 For more details about this integration, please refer to
 https://github.com/rotinom/smarthub
 """
+
 import asyncio
 import logging
 from datetime import timedelta
@@ -22,6 +23,10 @@ from .const import CONF_USERNAME
 from .const import DOMAIN
 from .const import PLATFORMS
 from .const import STARTUP_MESSAGE
+from .const import CONF_SERVICE_LOCATION_NUMBER
+from .const import CONF_ACCOUNT_NUMBER
+from homeassistant.const import CONF_URL
+
 
 SCAN_INTERVAL = timedelta(seconds=30)
 
@@ -41,9 +46,14 @@ async def async_setup_entry(hass: HomeAssistant, entry: ConfigEntry):
 
     username = entry.data.get(CONF_USERNAME)
     password = entry.data.get(CONF_PASSWORD)
+    url = entry.data.get(CONF_URL)
+    service_location = entry.data.get(CONF_SERVICE_LOCATION_NUMBER)
+    account_number = entry.data.get(CONF_ACCOUNT_NUMBER)
 
     session = async_get_clientsession(hass)
-    client = SmarthubApiClient(username, password, session)
+    client = SmarthubApiClient(
+        session, username, password, url, service_location, account_number
+    )
 
     coordinator = SmarthubDataUpdateCoordinator(hass, client=client)
     await coordinator.async_refresh()

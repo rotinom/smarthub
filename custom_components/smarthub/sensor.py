@@ -1,9 +1,11 @@
 """Sensor platform for Smarthub Co-op."""
+
 from .const import DEFAULT_NAME
 from .const import DOMAIN
 from .const import ICON
 from .const import SENSOR
 from .entity import SmarthubEntity
+from homeassistant.components.sensor import SensorDeviceClass
 
 
 async def async_setup_entry(hass, entry, async_add_devices):
@@ -23,6 +25,7 @@ class SmarthubSensor(SmarthubEntity):
     @property
     def state(self):
         """Return the state of the sensor."""
+        return "boilerplate"
         return self.coordinator.data.get("body")
 
     @property

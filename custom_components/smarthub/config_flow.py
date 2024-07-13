@@ -1,14 +1,21 @@
 """Adds config flow for Smarthub Co-op."""
+
 import voluptuous as vol
+
 from homeassistant import config_entries
+from homeassistant.const import CONF_URL
 from homeassistant.core import callback
 from homeassistant.helpers.aiohttp_client import async_create_clientsession
 
 from .api import SmarthubApiClient
-from .const import CONF_PASSWORD
-from .const import CONF_USERNAME
-from .const import DOMAIN
-from .const import PLATFORMS
+from .const import (
+    CONF_ACCOUNT_NUMBER,
+    CONF_PASSWORD,
+    CONF_SERVICE_LOCATION_NUMBER,
+    CONF_USERNAME,
+    DOMAIN,
+    PLATFORMS,
+)
 
 
 class SmarthubFlowHandler(config_entries.ConfigFlow, domain=DOMAIN):
@@ -59,7 +66,7 @@ class SmarthubFlowHandler(config_entries.ConfigFlow, domain=DOMAIN):
                     vol.Required(CONF_PASSWORD): str,
                     vol.Required(CONF_URL): str,
                     vol.Required(CONF_SERVICE_LOCATION_NUMBER): str,
-                    vol.Required(CONF_ACCOUNT_NUMBER): str
+                    vol.Required(CONF_ACCOUNT_NUMBER): str,
                 }
             ),
             errors=self._errors,

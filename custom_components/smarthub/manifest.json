@@ -6,7 +6,8 @@
   "dependencies": [],
   "config_flow": true,
   "codeowners": ["@rotinom"],
-  "requirements": ["requests==2.32.3", "pydantic==1.10.17"],
+  "requirements": ["requests==2.32.3", "pydantic"],
   "integration_type": "hub",
-  "iot_class": "cloud_polling"
+  "iot_class": "cloud_polling",
+  "version": "0.0.1"
 }
