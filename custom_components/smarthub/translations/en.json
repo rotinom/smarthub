@@ -6,7 +6,9 @@
         "description": "If you need help with the configuration have a look here: https://github.com/rotinom/smarthub",
         "data": {
           "username": "Username",
-          "password": "Password"
+          "password": "Password",
+          "service_location_number": "Service Location Number",
+          "account_number": "AccountNumber"
         }
       }
     },

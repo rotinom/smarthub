@@ -25,6 +25,8 @@ PLATFORMS = [BINARY_SENSOR, SENSOR, SWITCH]
 CONF_ENABLED = "enabled"
 CONF_USERNAME = "username"
 CONF_PASSWORD = "password"
+CONF_SERVICE_LOCATION_NUMBER = "service_location_number"
+CONF_ACCOUNT_NUMBER = "account_number"
 
 # Defaults
 DEFAULT_NAME = DOMAIN

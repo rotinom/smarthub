@@ -54,7 +54,13 @@ class SmarthubFlowHandler(config_entries.ConfigFlow, domain=DOMAIN):
         return self.async_show_form(
             step_id="user",
             data_schema=vol.Schema(
-                {vol.Required(CONF_USERNAME): str, vol.Required(CONF_PASSWORD): str}
+                {
+                    vol.Required(CONF_USERNAME): str,
+                    vol.Required(CONF_PASSWORD): str,
+                    vol.Required(CONF_URL): str,
+                    vol.Required(CONF_SERVICE_LOCATION_NUMBER): str,
+                    vol.Required(CONF_ACCOUNT_NUMBER): str
+                }
             ),
             errors=self._errors,
         )

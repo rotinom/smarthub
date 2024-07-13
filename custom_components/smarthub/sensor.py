@@ -33,4 +33,4 @@ class SmarthubSensor(SmarthubEntity):
     @property
     def device_class(self):
         """Return de device class of the sensor."""
-        return "smarthub__custom_device_class"
+        return SensorDeviceClass.ENERGY
